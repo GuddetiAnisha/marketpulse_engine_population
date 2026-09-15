@@ -1,0 +1,5 @@
+source_id,source_name,type,coverage,granularity,freshness,accessibility,reliability,notes
+S1,Synthetic Registration Index,public-regulatory,0.85,0.80,0.90,1.00,0.82,Illustrative registration-style source
+S2,Synthetic Industry Survey,industry-analyst,0.70,0.65,0.70,0.65,0.76,Illustrative survey source
+S3,Synthetic Trade Flow Dataset,public-trade,0.90,0.55,0.85,1.00,0.68,Illustrative import-export proxy
+S4,Synthetic Dealer Sample,commercial-sample,0.50,0.90,0.80,0.55,0.88,Illustrative sampled market intelligence
