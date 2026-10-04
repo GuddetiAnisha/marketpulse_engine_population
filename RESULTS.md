@@ -39,12 +39,30 @@ The four passing tests cover:
 3. validation that an internal estimate falls inside the supplied uncertainty interval;
 4. survival modelling that produces a declining surviving-engine population over time.
 
+## Streamlit UI validation
+
+The corrected Streamlit dashboard was launched successfully after the package and data-path fixes.
+
+The **Source Inventory** view rendered correctly and demonstrated that the bundled source catalogue is being loaded from the corrected `data/` directory. The dashboard displayed the maintainable source catalogue, calculated quality scores, and rendered the source-quality ranking chart without an application error.
+
+Observed source quality scores in the running UI:
+
+| Source | Quality score |
+|---|---:|
+| Synthetic Registration Index | 0.8545 |
+| Synthetic Trade Flow Dataset | 0.7730 |
+| Synthetic Dealer Sample | 0.7430 |
+| Synthetic Industry Survey | 0.7085 |
+
+This confirms that the Streamlit application, CSV loading, source-quality calculation, table rendering, and chart rendering work together end-to-end for the Source Inventory workflow.
+
 ## Current validation status
 
-The package/import problem is fixed and the analytical unit tests pass. The next recommended local check is to launch the Streamlit dashboard and confirm the four views render using the bundled CSV files:
+- package/import structure: **fixed**
+- bundled automated tests: **4 passed**
+- Streamlit application startup: **validated**
+- Source Inventory data loading and visualization: **validated**
 
-```powershell
-python -m streamlit run dashboard.py
-```
+The other dashboard views — **Triangulation**, **Validation**, and **Survival Scenarios** — are implemented in the project but are not claimed here as independently UI-validated until they are opened and checked in the local running application.
 
 Passing the bundled tests validates the implemented functions on the included cases. It does not demonstrate real-world engine-population accuracy because the repository uses synthetic/demo data and simplified assumptions.
